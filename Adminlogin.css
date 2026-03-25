@@ -1,0 +1,195 @@
+.admin-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  background: var(--blue);
+  position: relative;
+  overflow: hidden;
+}
+.al-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(123, 29, 53, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(76, 175, 125, 0.15) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+.al-card {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border-radius: 24px;
+  padding: 52px 44px;
+  max-width: 440px;
+  width: 100%;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.al-shield {
+  width: 64px;
+  height: 64px;
+  background: var(--wine);
+  clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0% 80%, 0% 20%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  gap: 1px;
+} /* Replace shield with logo */
+.al-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* keep spacing consistent */
+}
+.al-logo img {
+  width: 80px; /* adjust as needed */
+  height: 80px;
+  object-fit: contain;
+  border-radius: 12px; /* subtle rounding */
+}
+
+/* Hide the old shield */
+.al-shield {
+  display: none;
+}
+.al-shield span:first-child {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 1rem;
+}
+.al-shield span:last-child {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.65rem;
+}
+.al-card h2 {
+  font-size: 1.8rem;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+.al-sub {
+  color: var(--text-mid);
+  font-size: 0.85rem;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.al-form {
+  text-align: left;
+}
+.al-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+.al-group label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.al-group input {
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 13px 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.93rem;
+  color: var(--text);
+  background: var(--off-white);
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  width: 100%;
+}
+.al-group input:focus {
+  border-color: var(--blue-light);
+  box-shadow: 0 0 0 3px rgba(59, 114, 200, 0.1);
+  background: #fff;
+}
+.al-pass-wrap {
+  position: relative;
+}
+.al-pass-wrap input {
+  padding-right: 46px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.al-eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+  line-height: 1;
+}
+
+.al-error {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.al-submit {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+.al-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.al-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.al-footer-note {
+  margin-top: 24px;
+  font-size: 0.75rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+@media (max-width: 480px) {
+  .al-card {
+    padding: 36px 22px;
+  }
+}

@@ -22,13 +22,13 @@ const levels = [
 const steps = [
   {
     step: "01",
-    title: "Visit the School",
-    desc: "Come to No. 1 Vision Drive, Off School Road, Okutukutu, Yenagoa to obtain your registration form.",
+    title: "Fill the Online Form",
+    desc: "Complete the student registration form below with your child's details — student info, academic level, parent details, and medical info.",
   },
   {
     step: "02",
-    title: "Complete the Form",
-    desc: "Fill in the registration form with your child's details and submit it along with the required documents.",
+    title: "Visit the School",
+    desc: "Bring your child to No. 1 Vision Drive, Off School Road, Okutukutu, Yenagoa to verify your registration and collect your admission form.",
   },
   {
     step: "03",
@@ -92,6 +92,13 @@ export default function Admissions({ navigate }) {
                 </div>
               </div>
             ))}
+            <button
+              className="btn-wine"
+              style={{ marginTop: 10 }}
+              onClick={() => navigate("register")}
+            >
+              📝 Start Registration Form
+            </button>
           </div>
           <img
             src={img9}
@@ -107,8 +114,8 @@ export default function Admissions({ navigate }) {
           <div className="acb-text">
             <h2>Ready to Enrol?</h2>
             <p>
-              Visit us at our school premises or call to speak with our
-              admissions team directly.
+              Fill our online registration form or visit us at our school
+              premises to speak with our admissions team directly.
             </p>
             <p className="acb-address">
               📍 No. 1 Vision Drive, Off School Road, Okutukutu, Yenagoa,
@@ -116,6 +123,13 @@ export default function Admissions({ navigate }) {
             </p>
           </div>
           <div className="acb-actions">
+            <button
+              className="btn-wine"
+              style={{ padding: "16px 20px", fontSize: "1rem" }}
+              onClick={() => navigate("register")}
+            >
+              📝 Register Online
+            </button>
             <a href="tel:08103467725" className="acb-phone">
               <span>📞</span>
               <div>
